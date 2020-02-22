@@ -16,6 +16,6 @@ const throttle = (callback, time, limit) =>{
 
 export function useThrottledFunction(callback,time, limit){
     const limited = limit || 1;
-    const [callbackFunc,setCallbackFunc] = useState(()=>throttle(callback,time,limited));
+    const [ callbackFunc ] = useState(()=>throttle(callback,time,limited));
     return callbackFunc
 }
